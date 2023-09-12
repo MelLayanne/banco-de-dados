@@ -74,3 +74,8 @@ FROM vendas
 GROUP BY produto
 ORDER BY vendastotais
 LIMIT 1;
+
+SELECT alunos.nome AS Aluno, COUNT(matriculas.id) AS TotalMatr
+FROM alunos
+LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id
+GROUP BY alunos.nome;
